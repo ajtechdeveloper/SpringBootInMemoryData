@@ -34,7 +34,7 @@ public class PingController {
 
     @PostMapping("ping")
     public ResponseEntity<Map<String, String>> send(@RequestBody PingRequest pingRequest) {
-        logger.info("Request received is: " + pingRequest );
+        logger.info("Request received is: {}" , pingRequest );
         Map<String, String> response = new HashMap<>();
         response.put("message", "");
         if("ping".equalsIgnoreCase(pingRequest.getInput())) {
